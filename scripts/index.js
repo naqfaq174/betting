@@ -1,6 +1,6 @@
-const kf = document.querySelector('#kf').value
-const win = document.querySelector('#win').value
-const all = document.querySelector('#all').value
+const kf = document.querySelector('#kf')
+const win = document.querySelector('#win')
+const all = document.querySelector('#all')
 const result = document.querySelector('#result')
 const btn = document.querySelector('#btn')
 
@@ -15,9 +15,9 @@ if (val) {
 
 btn.addEventListener('click', () => {
    result.innerHTML = `
-   <p>Вероятность букмекера: ${Math.floor(1 / kf * 100)}%</p>
-   <p>Вероятность игрока ${Math.floor(win / all * 100)}%</p>
-   <p>Коэффициент игрока: ${1 / (win / all * 100) * 100}</p>
+   <p>Вероятность букмекера: ${Math.floor(1 / kf.value * 100)}%</p>
+   <p>Вероятность игрока ${Math.floor(win.value / all.value * 100)}%</p>
+   <p>Коэффициент игрока: ${(1 / (win.value / all.value * 100) * 100).toFixed(2)}</p>
    <p>Валуйность: ${valResult}</p>
    `
 })
