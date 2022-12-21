@@ -12,14 +12,22 @@
 <body>
    <h1>Калькулятор ставок</h1>
 
-   <p>Коэффициент букмекеоа:</p>
-   <input type="number">
+   <p>Коэффициент букмекера:</p>
+   <input type="number" id="kf" value="1.88">
 
    <p>Результат прошлых встреч:</p>
-   <input type="number">
+   <input type="number" id="win" value="8">
 
    <p>Количество прошлых встреч:</p>
-   <input type="number">
+   <input type="number" id="all" value="10">
+
+   <br>
+   <br>
+   <button id="btn">Расчитать</button>
+
+   <div id="result"></div>
+
+   <script src="scripts/index.js"></script>
 </body>
 
 </html>
